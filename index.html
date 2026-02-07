@@ -13,8 +13,8 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            /* Optional: Add a background image or color here if you want the "hosting" page to look nice */
-            background-color: #f9f9f9; 
+            /* Transparent background so it looks clean inside the iframe */
+            background-color: transparent; 
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
     </style>
@@ -22,22 +22,31 @@
 <body>
 
     <ai-agent-float-container
-        header="Data & Business Buddy"
-        agentname="VSE Buddy"
-        greeting="Welcome! I am your AI assistant for the Faculty of Informatics and Statistics. How can I help?"
         primary="#6FA895"
         primarycontrast="#6FA895"
-        text="#444444"
         paper="#FFFFFF"
-        textinputplaceholder="Ask me anything..."
+        text="#444444"
     >
-        
+        <h2 slot="header" style="margin: 0; font-size: 18px; color: #FFFFFF;">
+            VSE Data & Business Buddy
+        </h2>
+
         <ai-agent-embed slot="content"
             agent="689cf1a3-624f-4256-bd53-6366fbca04de"
             server="https://buddy.vse.cz/services/sva">
+            
+            <span slot="pre-chat-messages">
+                <ai-agent-dialog-row
+                    sender="FIS Buddy"
+                    message="I am assistant for the Faculty of Informatics and Statistics. How can I help?"
+                ></ai-agent-dialog-row>
+            </span>
+
         </ai-agent-embed>
 
-        <span slot="open-chat-button-content">Chat with Buddy</span>
+        <span slot="open-chat-button-content" style="font-weight: 600;">
+            Chat with Buddy
+        </span>
 
     </ai-agent-float-container>
 
