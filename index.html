@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VSE Data & Business Buddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://buddy.vse.cz/integrations/next/ai-agent-components.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            /* Optional: Add a background image or color here if you want the "hosting" page to look nice */
+            background-color: #f9f9f9; 
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <ai-agent-float-container
+        header="Data & Business Buddy"
+        agentname="VSE Buddy"
+        greeting="Welcome! I am your AI assistant for the Faculty of Informatics and Statistics. How can I help?"
+        primary="#6FA895"
+        primarycontrast="#6FA895"
+        text="#444444"
+        paper="#FFFFFF"
+        textinputplaceholder="Ask me anything..."
+    >
+        
+        <ai-agent-embed slot="content"
+            agent="689cf1a3-624f-4256-bd53-6366fbca04de"
+            server="https://buddy.vse.cz/services/sva">
+        </ai-agent-embed>
+
+        <span slot="open-chat-button-content">Chat with Buddy</span>
+
+    </ai-agent-float-container>
+
+</body>
+</html>
