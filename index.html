@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agent Test</title>
+    <title>FIS Chatbot</title>
+    
     <script src="https://buddy.vse.cz/integrations/next/ai-agent-embed.js"></script>
     <script src="https://buddy.vse.cz/integrations/next/ai-agent-components.js"></script>
+
+    <style>
+        /* Reset okrajů, aby tlačítko sedělo správně v rohu */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; }
+    </style>
 </head>
 <body>
 
     <ai-agent-float-container
-        primary="#333333"
-        primarycontrast="#333333"
+        primary="#0065BD"
+        primarycontrast="#0065BD"
         paper="#ffffff"
-        text="#000000"
+        text="#333333"
+        textinputplaceholder="Napište zprávu..."
     >
-        <h2 slot="header">VSE Buddy</h2>
+        <h2 slot="header" style="font-size: 1rem; margin: 0; color: #ffffff;">
+            FIS Chatbot IT a Anatomie firmy
+        </h2>
 
         <ai-agent-embed 
             slot="content"
@@ -24,14 +33,14 @@
             
             <span slot="pre-chat-messages">
                 <ai-agent-dialog-row
-                    sender="System"
-                    message="Functionality test. Type a message."
+                    sender="FIS Bot"
+                    message="Dobrý den! Jsem váš průvodce pro IT a Anatomii firmy. S čím vám mohu pomoci?"
                 ></ai-agent-dialog-row>
             </span>
             
         </ai-agent-embed>
 
-        <span slot="open-chat-button-content">Open Chat</span>
+        <span slot="open-chat-button-content">Otevřít chat</span>
 
     </ai-agent-float-container>
 
