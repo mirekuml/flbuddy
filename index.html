@@ -2,48 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>VSE Data & Business Buddy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agent Test</title>
     
     <script src="https://buddy.vse.cz/integrations/next/ai-agent-components.js"></script>
-
-    <style>
-        /* Basic reset to ensure the chat button sits correctly at the bottom */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-    </style>
 </head>
 <body>
 
-    <ai-agent-float-container
-        primary="#6FA895"          primarycontrast="#6FA895"  paper="#FFFFFF"            text="#444444"             textinputplaceholder="Ask me anything..."
-    >
-        
-        <h2 slot="header" style="margin: 0; font-size: 1.2rem; color: #FFFFFF;">
-            VSE Data & Business Buddy
-        </h2>
+    <ai-agent-float-container>
+        <h2 slot="header">VSE Buddy</h2>
 
-        <ai-agent-embed slot="content"
+        <ai-agent-embed 
+            slot="content"
             agent="689cf1a3-624f-4256-bd53-6366fbca04de"
             server="https://buddy.vse.cz/services/sva">
             
             <span slot="pre-chat-messages">
                 <ai-agent-dialog-row
-                    sender="FIS Buddy"
-                    message="Welcome! I am the assistant for the Faculty of Informatics and Statistics. How can I help?"
+                    sender="System"
+                    message="Functionality test. Type a message."
                 ></ai-agent-dialog-row>
             </span>
-
+            
         </ai-agent-embed>
 
-        <span slot="open-chat-button-content">
-            Chat with Buddy
-        </span>
+        <span slot="open-chat-button-content">Open Chat</span>
 
     </ai-agent-float-container>
 
