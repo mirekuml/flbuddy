@@ -8,13 +8,12 @@
     <script src="https://buddy.vse.cz/integrations/next/ai-agent-components.js"></script>
 
     <style>
-        /* This ensures the agent has room to exist inside the file */
+        /* Basic reset to ensure the chat button sits correctly at the bottom */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             width: 100%;
-            background-color: transparent; /* Invisible background */
+            height: 100%;
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
     </style>
@@ -22,14 +21,10 @@
 <body>
 
     <ai-agent-float-container
-        primary="#6FA895"
-        primarycontrast="#6FA895"
-        paper="#FFFFFF"
-        text="#444444"
-        greeting="Welcome! I am your AI assistant for the Faculty of Informatics and Statistics. How can I help?"
+        primary="#6FA895"          primarycontrast="#6FA895"  paper="#FFFFFF"            text="#444444"             textinputplaceholder="Ask me anything..."
     >
         
-        <h2 slot="header" style="margin:0; font-size:1.1rem; color:white;">
+        <h2 slot="header" style="margin: 0; font-size: 1.2rem; color: #FFFFFF;">
             VSE Data & Business Buddy
         </h2>
 
@@ -40,13 +35,15 @@
             <span slot="pre-chat-messages">
                 <ai-agent-dialog-row
                     sender="FIS Buddy"
-                    message="I am assistant for the Faculty of Informatics and Statistics. How can I help?"
+                    message="Welcome! I am the assistant for the Faculty of Informatics and Statistics. How can I help?"
                 ></ai-agent-dialog-row>
             </span>
 
         </ai-agent-embed>
 
-        <span slot="open-chat-button-content">Chat with Buddy</span>
+        <span slot="open-chat-button-content">
+            Chat with Buddy
+        </span>
 
     </ai-agent-float-container>
 
