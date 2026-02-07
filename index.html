@@ -8,13 +8,13 @@
     <script src="https://buddy.vse.cz/integrations/next/ai-agent-components.js"></script>
 
     <style>
+        /* This ensures the agent has room to exist inside the file */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            /* Transparent background so it looks clean inside the iframe */
-            background-color: transparent; 
+            background-color: transparent; /* Invisible background */
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
     </style>
@@ -26,8 +26,10 @@
         primarycontrast="#6FA895"
         paper="#FFFFFF"
         text="#444444"
+        greeting="Welcome! I am your AI assistant for the Faculty of Informatics and Statistics. How can I help?"
     >
-        <h2 slot="header" style="margin: 0; font-size: 18px; color: #FFFFFF;">
+        
+        <h2 slot="header" style="margin:0; font-size:1.1rem; color:white;">
             VSE Data & Business Buddy
         </h2>
 
@@ -44,9 +46,7 @@
 
         </ai-agent-embed>
 
-        <span slot="open-chat-button-content" style="font-weight: 600;">
-            Chat with Buddy
-        </span>
+        <span slot="open-chat-button-content">Chat with Buddy</span>
 
     </ai-agent-float-container>
 
